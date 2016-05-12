@@ -77,5 +77,5 @@ var Plotter = function(args) {
 	
 	// TODO: We'll want to add the scatterXYChart method here.
 	
-	// TODO: We'll want to add the 
+	// TODO: We'll want to add the bar chart, and/or heat map (if we have time)
 };

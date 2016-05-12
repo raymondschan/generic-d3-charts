@@ -1,0 +1,24 @@
+{
+	"x-axis":{
+		"title":"Date",
+		"key":"timestamp",
+		"type":"Date"
+	},
+	"y-axis1":{
+		"title":"Impressions",
+		"key":"impressions",
+		"type":"Number"
+	},
+	"data":[
+		{
+			"timestamp":1462863600000,
+			"impressions":423434
+		},{
+			"timestamp":1462950000000,
+			"impressions":78951
+		},{
+			"timestamp":1463036400000,
+			"impressions":908924
+		}
+	]
+}

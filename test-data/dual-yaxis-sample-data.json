@@ -1,0 +1,32 @@
+{
+	"x-axis":{
+		"title":"Date",
+		"key":"timestamp",
+		"type":"Date"
+	},
+	"y-axis1":{
+		"title":"Impressions",
+		"key":"impressions",
+		"type":"Number"
+	},
+	"y-axis2":{
+		"title":"eCPA",
+		"key":"eCPA",
+		"type":"Percent"
+	},
+	"data":[
+		{
+			"timestamp":1462863600000,
+			"impressions":423434,
+			"eCPA":1.342
+		},{
+			"timestamp":1462950000000,
+			"impressions":78951,
+			"eCPA":1.23121
+		},{
+			"timestamp":1463036400000,
+			"impressions":908924,
+			"eCPA":0.23421
+		}
+	]
+}

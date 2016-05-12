@@ -33,6 +33,11 @@ var Plotter = function(args) {
 			.attr("height", height + margin.top + margin.bottom)
 		  .append("g")
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		// If this were jQuery I would use:
+		//$.ajax("/jax/analytics2People/job/" + id, function(theJsonResponse) {
+			// TODO: Do something with theJsonResponse
+		//});
 	
 		d3.tsv(dataSourceFile, type, function(error, data) {
 		  if (error) throw error;

@@ -67,4 +67,10 @@ var Plotter = function(args) {
 		  return d;
 		}
 	}
+
+	// TODO: We'll want to add the dualAxisLineChart method here.
+	
+	// TODO: We'll want to add the scatterXYChart method here.
+	
+	// TODO: We'll want to add the 
 };

@@ -1,0 +1,25 @@
+{
+	"x_axis":{
+		"title":"Combined Convertion Rate",
+		"type":"Percentage"
+	},
+	"y_axis":{
+		"title":"Exposure",
+		"type":"Label"
+	},
+	"data":[
+		{
+        	"x":0.002735,
+        	"y":"National Only"
+        },{
+            "x":0.009873,
+          	"y":"National First"
+        },{
+			"x":0.013449,
+			"y":"Regional First"
+		},{
+		    "x":0.000515,
+		    "y":"Regional Only"
+		}
+	]
+}

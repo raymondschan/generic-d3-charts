@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<!-- Example based on http://bl.ocks.org/mbostock/3887118 -->
+<!-- Tooltip example from http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html -->
+
+<style>
+    .bar {
+    fill: steelblue;
+    }
+
+    .bar:hover {
+    fill: brown;
+    }
+
+    .axis {
+    font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+    }
+
+    .x.axis path {
+    display: none;
+    }
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="/scripts/simple-chart-plotter.js"></script>
+
+<script>
+var plotter = new Plotter(null);
+plotter.barChart("/test-data/bar-chart-sample-data.json");
+</script>

@@ -1,0 +1,37 @@
+{
+	"x_axis":{
+		"title":"Date",
+		"type":"Date"
+	},
+	"y_axis":{
+		"title":"Impressions",
+		"type":"Number"
+	},
+	"color":{
+	    "title":"category",
+	    "type":"String"
+	},
+	"data":[
+		{
+			"x":1462863600000,
+			"y":423434,
+			"color":"Age 30"
+		},{
+			"x":1462950000000,
+			"y":78951,
+            "color":"Age 25"
+		},{
+			"x":1463036400000,
+			"y":908924,
+			"color":"Age 50"
+		},{
+		    "x":1462863600000,
+		    "y":93765,
+		    "color":"Age 25"
+		},{
+		    "x":1463036400000,
+		    "y":1500000,
+		    "color":"Age 25"
+		}
+	]
+}

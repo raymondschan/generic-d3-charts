@@ -14,7 +14,7 @@ body {
 }
 
 .x.axis path {
-  display: none;
+  display: 1px;
 }
 
 .line {
@@ -31,5 +31,5 @@ body {
 <script>
 var plotter = new Plotter(null);
 
-plotter.singleAxisLineChart("line-chart-sample-data.tsv");
+plotter.singleAxisLineChart("/test-data/single-yaxis-sample-data.json");
 </script>

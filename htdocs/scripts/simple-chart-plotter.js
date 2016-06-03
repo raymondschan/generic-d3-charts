@@ -90,6 +90,15 @@ var Plotter = function(args) {
 		});
 	}
 
+	this.circlePercentageChart = function(radius, arcWidth, percentComplete) {
+		var innerRad = radius - (arcWidth - 2);
+		var outerRad = radius + (arcWidth - 2);
+		var completedInRadian = percentComplete * 360 * (Math.PI/180);
+		var arc = d3.svg.arc().innerRadius(innerRad).outerRadius(outerRad).startAngle(0).endAngle(completedInRadian);
+
+		svg.attr("width", radius * 2).attr("height", radius * 2).append("path").attr("d", arc).attr("fill", "blue");
+	}
+
 	// TODO: We'll want to add the dualAxisLineChart method here.
 	
 	// TODO: We'll want to add the scatterXYChart method here.

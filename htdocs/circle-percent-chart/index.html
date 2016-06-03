@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>Line Graph with Dual-scaled Axes using SVG and d3.js</title>
+		<script src="https://d3js.org/d3.v3.min.js"></script>
+	</head>
+	<body>
+
+	<script>
+		var drawArc = function(radius, arcWidth, percentComplete, animateMaxDurationMS) {
+			var vis = d3.select("body").append("svg")
+			var pi = Math.PI;
+
+			var innerRad = radius - (arcWidth / 2);
+			var outerRad = radius + (arcWidth / 2);
+
+			var degreeCompleted = percentComplete * 360;
+
+ 			// Added height and width so arc is visible
+			var path = vis.attr("width", outerRad * 2).attr("height", outerRad * 2).append("path");
+			path.attr("transform", "translate("+outerRad+","+outerRad+")");
+
+			var label = vis.append("text").attr("font-family","Helvetica").attr("font-size","80");
+
+			var drawCircleDeg = 0;
+			var drawCircle = setInterval(function() {
+				if(drawCircleDeg < degreeCompleted) {
+					drawCircleDeg++;
+
+					var fillColor = drawCircleDeg < (0.75 * 360) ? 'blue' : 'red';
+					var percentText = Math.round(drawCircleDeg / 360 * 100) + "%";
+					var radianCompleted = drawCircleDeg * (Math.PI/180);
+
+					var arc = d3.svg.arc()
+						.innerRadius(innerRad)
+						.outerRadius(outerRad)
+						.startAngle(0) //converting from degs to radians
+						.endAngle(radianCompleted) //just radians
+
+					path.attr("d", arc).attr("fill", fillColor);
+					label.html(percentText).attr("fill", fillColor)
+						.attr("x", outerRad - (label.node().getBoundingClientRect().width / 2))
+						.attr("y", outerRad + (label.node().getBoundingClientRect().height / 2));
+				} else {
+					clearInterval(drawCircle);
+				}
+			}, Math.round(animateMaxDurationMS / 360));
+		}
+
+		drawArc(200, 40, 0.83, 1000);
+	</script>
+
+	</body>
+</html>
